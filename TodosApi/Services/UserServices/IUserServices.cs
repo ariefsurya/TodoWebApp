@@ -6,7 +6,7 @@ namespace TodosApi.Services
     {
         public List<User> GeUserList();
         public User AddUser(User user);
-        bool isUserExists(string username);
+        bool isUserNameExists(string username);
         public User GetUser(string username, string password);
         public User GetUser(int userId);
     }

@@ -23,7 +23,7 @@ namespace TodosApi.Services
             _dbContext.SaveChanges();
             return result.Entity;
         }
-        public bool isUserExists(string username)
+        public bool isUserNameExists(string username)
         {
             bool userIsExists = _dbContext.User.Where(x => x.Username == username).Any();
             return userIsExists;
@@ -31,15 +31,11 @@ namespace TodosApi.Services
         public User GetUser(string username, string password)
         {
             User user = _dbContext.User.Where(x => x.Username == username && x.Password == password).FirstOrDefault();
-            if (user != null)
-                user.Password = string.Empty;
             return user;
         }
         public User GetUser(int userId)
         {
             User user = _dbContext.User.Where(x => x.Id == userId).FirstOrDefault();
-            if (user != null)
-                user.Password = string.Empty;
             return user;
         }
     }
