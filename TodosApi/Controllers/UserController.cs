@@ -27,7 +27,7 @@ namespace TodosApi.Controllers
                 {
                     return responseHandler.ApiReponseBadRequest("Username And Password cannot be empty!");
                 }
-                bool isUserAlreadyExists = _userServices.isUserExists(user.Username);
+                bool isUserAlreadyExists = _userServices.isUserNameExists(user.Username);
                 if (isUserAlreadyExists)
                 {
                     return responseHandler.ApiReponseBadRequest("Username Already Exists!");
@@ -58,19 +58,6 @@ namespace TodosApi.Controllers
                     return responseHandler.ApiReponseNotFound("Your username or password is incorrect.");
                 }
                 return responseHandler.ApiReponseHandler(user);
-            }
-            catch (Exception ex)
-            {
-                return responseHandler.ApiReponseException(ex);
-            }
-        }
-
-        [HttpGet("getAllUser")]
-        public IActionResult GetAllUser()
-        {
-            try
-            {
-                return responseHandler.ApiReponseHandler(_userServices.GeUserList());
             }
             catch (Exception ex)
             {
