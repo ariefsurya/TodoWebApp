@@ -1,0 +1,147 @@
+﻿@using Newtonsoft.Json
+@using TodoWebApp.Repository.TodoRepository
+@inject ITodoRepository _todoRepo
+@inject SweetAlertService Swal
+@* @using TodoWebApp.Service *@
+@inject ICookieService CookieService
+@* @using Blazored.Modal
+@using Blazored.Modal.Services  
+@inject IModalService ModalService *@
+
+<div>
+    <Toasts class="p-3" Messages="toastMessage" Placement="ToastsPlacement.TopRight" />
+    <EditForm Model="selectedTodo" OnValidSubmit="HandleValidSubmit">
+        @if (!string.IsNullOrEmpty(SubmitErrorMessage))
+        {
+            <div class="text-danger fs-6">@SubmitErrorMessage</div>
+        }
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Status</label>
+            <div class="col-sm-10">
+                <InputSelect @bind-Value="selectedTodo.MarkingId" class="form-control">
+                    @foreach (var option in markOptions)
+                    {
+                        <option value="@option.Id">@option.Name</option>
+                    }
+                </InputSelect>
+               @*  <select id="marking" @bind="selectedTodo.MarkingId" class="form-control">
+                    @foreach (var option in markOptions)
+                    {
+                        <option value="@option.Id">@option.Name</option>
+                    }
+                    </select> *@
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <label for="subject" class="col-sm-2 col-form-label">Subject</label>
+            <div class="col-sm-10">
+                <InputText id="subject" @bind-Value="selectedTodo.Subject" />
+                @if (!string.IsNullOrEmpty(SubjectErrorMessage))
+                {
+                    <div class="text-danger fs-6">@SubjectErrorMessage</div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <InputTextArea id="description" class="form-control" @bind-Value="selectedTodo.Description" />
+        </div>
+        <button type="submit" class="btn btn-primary d-flex m-auto mt-2">Save</button>
+        <Spinner Class="me-3" Type="SpinnerType.Dots" Color="SpinnerColor.Primary" Visible="@isLoading" />
+
+    </EditForm>
+</div>
+
+@code {
+    [Parameter]
+    public Todo selectedTodo { get; set; }
+
+    [Parameter]
+    public EventCallback<Todo> onModalCallback { get; set; }
+
+    public Todo resultTodo = null;
+    public string SubmitErrorMessage;
+    public string SubjectErrorMessage;
+
+    private List<Marking> markOptions = new List<Marking>();
+    List<ToastMessage> toastMessage = new List<ToastMessage>();
+
+    bool isLoading = false;
+    protected override async Task OnInitializedAsync()
+    {
+        GetMarking();
+    }
+    private async void GetMarking()
+    {
+        var response = await _todoRepo.GetMarking();
+        if (response.Code != 200)
+        {
+            toastMessage.Add(new ToastMessage
+                {
+                    Type = ToastType.Danger,
+                    Message = "Failed to get Status",
+                }
+            );
+            return;
+        }
+
+        markOptions = JsonConvert.DeserializeObject<List<Marking>>(response.Data.ToString());
+        StateHasChanged();
+    }
+
+    protected async Task HandleValidSubmit()
+    {
+        SubmitErrorMessage = "";
+        SubjectErrorMessage = "";
+        bool isValid = await HandleValidation();
+
+        if (isValid)
+        {
+            isLoading = true;
+            var userId = Int32.Parse(await CookieService.GetValue("userId"));
+            selectedTodo.CreatedBy = userId;
+            var response = await _todoRepo.SubmitTodo(selectedTodo);
+            if (response.Code != 200)
+            {
+                SubmitErrorMessage = response.Data.ToString();
+                return;
+            }
+
+            resultTodo = JsonConvert.DeserializeObject<Todo>(response.Data.ToString());
+            isLoading = false;
+
+            SweetAlertResult result = await Swal.FireAsync(new SweetAlertOptions
+                {
+                    Title = "Success",
+                    Text = "You are successfully submit Todo",
+                    Icon = SweetAlertIcon.Success,
+                    ShowCancelButton = false,
+                    ConfirmButtonText = "Ok",
+                }
+            );
+            if (!string.IsNullOrEmpty(result.Value) || string.IsNullOrEmpty(result.Value))
+            {
+                CloseModalTodo();
+            }
+
+        }
+    }
+
+    private async Task<bool> HandleValidation()
+    {
+        if (string.IsNullOrEmpty(selectedTodo.Subject))
+        {
+            SubjectErrorMessage = "Subject cannot be empty";
+            return false;
+        }
+
+        return true;
+    }
+
+    async Task CloseModalTodo()
+    {
+        await onModalCallback.InvokeAsync(resultTodo);
+        // await ModalService.CloseAsync();
+    }
+
+}

@@ -1,0 +1,406 @@
+﻿@page "/"
+@using BlazorBootstrap;
+@using Newtonsoft.Json
+@using TodoWebApp.Enum
+@using TodoWebApp.Repository.TodoRepository
+@* @using TodoWebApp.Service *@
+@inject ITodoRepository _todoRepo
+@inject SweetAlertService Swal
+@inject ICookieService CookieService
+@inject StringService StringService
+
+<h3>My Todo List</h3>
+<div class="d-flex justify-content-between pb-1">
+    <div>
+        <input type="text" @bind-value="@parameterSearchTodo.Search" @onkeypress="OnSearchKeywordChanged" placeholder="search subject" /><input type="submit" value="Filter" @onclick="SearchTodos" />
+    </div>
+    <button type="submit" class="btn btn-success" @onclick="() => ShowModalEditTodo(null)">+ Add new Todo</button>
+</div>
+<div class="d-flex">
+    <div class="col-4">
+        <div class="border border-primary me-3">
+            <div class="fw-bold ps-2 text-primary">Unmarked</div>
+            <Spinner Color="SpinnerColor.Primary" Visible="@isLoadingUnmarked" />
+            @if (unmarkedTodos.Todo.Count() == 0)
+            {
+                <div>No Data</div>
+            }
+            else {
+                @foreach (var unmarkedTodo in unmarkedTodos.Todo)
+                {
+                    <div class="card m-3">
+                        <div class="card-header d-flex justify-content-between">
+                            <div class="my-auto w-75">
+                                <div class="small">
+                                    @StringService.FormatToAC(unmarkedTodo.Id)
+                                </div><div class="fw-bold">
+                                    @unmarkedTodo.Subject
+                                </div>
+                            </div>
+                            <div class="w-25 text-end">
+                                <Dropdown>
+                                    <DropdownToggleButton Color="ButtonColor.Secondary" Class="p-0"><Icon Name="IconName.ThreeDotsVertical" Class="small" /></DropdownToggleButton>
+                                    <DropdownMenu>
+                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => ShowModalEditTodo(unmarkedTodo)">Edit</DropdownItem>
+                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => DeleteTodo(unmarkedTodo)">Delete</DropdownItem>
+                                    </DropdownMenu>
+                                </Dropdown>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="small">@unmarkedTodo.Description</span>
+                        </div>
+                    </div>
+                }
+                <div>
+                    <Pagination ActivePageNumber="@parameterSearchTodo.PageUnmarked"
+                                TotalPages="(int)Math.Ceiling(Convert.ToDecimal(unmarkedTodos.Total)/10)"
+                                PageChanged="OnUnmarkedTodosPaging"
+                                class="d-flex justify-content-center" />
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="border border-success me-3">
+            <div class="fw-bold ps-2 text-success">Done</div>
+            <Spinner Color="SpinnerColor.Primary" Visible="@isLoadingDone" />
+            @if (doneTodos.Todo.Count() == 0)
+            {
+                <div>No Data</div>
+            }
+            else {
+                @foreach (var doneTodo in doneTodos.Todo)
+                {
+                    <div class="card m-3">
+                        <div class="card-header d-flex justify-content-between">
+                            <div class="my-auto w-75">
+                                <div class="small">
+                                    @StringService.FormatToAC(doneTodo.Id)
+                                </div><div class="fw-bold">
+                                    @doneTodo.Subject
+                                </div>
+                            </div>
+                            <div class="w-25 text-end">
+                                <Dropdown>
+                                    <DropdownToggleButton Color="ButtonColor.Secondary" Class="p-0"><Icon Name="IconName.ThreeDotsVertical" Class="small" /></DropdownToggleButton>
+                                    <DropdownMenu>
+                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => ShowModalEditTodo(doneTodo)">Edit</DropdownItem>
+                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => DeleteTodo(doneTodo)">Delete</DropdownItem>
+                                    </DropdownMenu>
+                                </Dropdown>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="small">@doneTodo.Description</span>
+                        </div>
+                    </div>
+                }
+                <div>
+                    <Pagination ActivePageNumber="@parameterSearchTodo.PageDone"
+                                TotalPages="(int)Math.Ceiling(Convert.ToDecimal(doneTodos.Total)/10)"
+                                PageChanged="OnDoneTodosPaging"
+                                class="d-flex justify-content-center" />
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="border border-danger me-3">
+            <div class="fw-bold ps-2 text-danger">Canceled</div>
+            <Spinner Color="SpinnerColor.Primary" Visible="@isLoadingCanceled" />
+            @if (canceledTodos.Todo.Count() == 0)
+            {
+                <div>No Data</div>
+            }
+            else {
+                @foreach (var canceledTodo in canceledTodos.Todo)
+                {
+                    <div class="card m-3">
+                        <div class="card-header d-flex justify-content-between">
+                            <div class="my-auto w-75">
+                                <div class="small">
+                                    @StringService.FormatToAC(canceledTodo.Id)
+                                </div><div class="fw-bold">
+                                    @canceledTodo.Subject
+                                </div>
+                            </div>
+                            <div class="w-25 text-end">
+                                <Dropdown>
+                                    <DropdownToggleButton Color="ButtonColor.Secondary" Class="p-0"><Icon Name="IconName.ThreeDotsVertical" Class="small" /></DropdownToggleButton>
+                                    <DropdownMenu>
+                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => ShowModalEditTodo(canceledTodo)">Edit</DropdownItem>
+                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => DeleteTodo(canceledTodo)">Delete</DropdownItem>
+                                    </DropdownMenu>
+                                </Dropdown>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="small">@canceledTodo.Description</span>
+                        </div>
+                    </div>
+                }
+                <div>
+                    <Pagination ActivePageNumber="@parameterSearchTodo.PageCanceled"
+                                TotalPages="(int)Math.Ceiling(Convert.ToDecimal(canceledTodos.Total)/10)"
+                                PageChanged="OnCancelledTodosPaging"
+                                class="d-flex justify-content-center" />
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<Modal @ref="modalEditTodo" />
+
+@code {
+    private ParameterSearchTodo parameterSearchTodo = new ParameterSearchTodo();
+    MyTodo unmarkedTodos = new MyTodo();
+    MyTodo doneTodos = new MyTodo();
+    MyTodo canceledTodos = new MyTodo();
+    private Timer debounceTimer;
+
+    private Modal modalEditTodo;
+    private Todo selectedItem;
+
+    private bool isLoadingUnmarked = false;
+    private bool isLoadingDone = false;
+    private bool isLoadingCanceled = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        parameterSearchTodo.Search = "";
+        SearchTodos(null);
+    }
+
+    private async Task OnSearchKeywordChanged(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            // seachkeyword = e.Value.ToString();
+            debounceTimer?.Dispose();
+            debounceTimer = new Timer(SearchTodos, null, 500, Timeout.Infinite);
+        }
+    }
+    private async void SearchTodos(object state)
+    {
+        parameterSearchTodo.PageUnmarked = 1;
+        parameterSearchTodo.PageDone = 1;
+        parameterSearchTodo.PageCanceled = 1;
+
+        SearchUnmarkedTodos();
+        SearchDoneTodos();
+        SearchCanceledTodos();
+    }
+    private async void SearchUnmarkedTodos()
+    {
+        await InvokeAsync(async () =>
+        {
+            isLoadingUnmarked = true;
+            var userId = Int32.Parse(await CookieService.GetValue("userId"));
+            var response = await _todoRepo.SearchMyTodo(userId, parameterSearchTodo.Search, parameterSearchTodo.PageUnmarked, (int)MarkingEnum.Unmarked);
+            isLoadingUnmarked = false;
+            if (response.Code != 200)
+            {
+                return;
+            }
+
+            unmarkedTodos = JsonConvert.DeserializeObject<MyTodo>(response.Data.ToString());
+
+            StateHasChanged();
+        });
+    }
+    private async void SearchDoneTodos()
+    {
+        await InvokeAsync(async () =>
+        {
+            isLoadingDone = true;
+            var userId = Int32.Parse(await CookieService.GetValue("userId"));
+            var response = await _todoRepo.SearchMyTodo(userId, parameterSearchTodo.Search, parameterSearchTodo.PageUnmarked, (int)MarkingEnum.Done);
+            isLoadingDone = false;
+            if (response.Code != 200)
+            {
+                return;
+            }
+
+            doneTodos = JsonConvert.DeserializeObject<MyTodo>(response.Data.ToString());
+
+            StateHasChanged();
+        });
+    }
+    private async void SearchCanceledTodos()
+    {
+        await InvokeAsync(async () =>
+        {
+            isLoadingCanceled = true;
+            var userId = Int32.Parse(await CookieService.GetValue("userId"));
+            var response = await _todoRepo.SearchMyTodo(userId, parameterSearchTodo.Search, parameterSearchTodo.PageUnmarked, (int)MarkingEnum.Canceled);
+            isLoadingCanceled = false;
+            if (response.Code != 200)
+            {
+                return;
+            }
+
+            canceledTodos = JsonConvert.DeserializeObject<MyTodo>(response.Data.ToString());
+
+            StateHasChanged();
+        });
+    }
+
+    private async Task OnUnmarkedTodosPaging(int newPageNumber)
+    {
+        await Task.Run(() => { parameterSearchTodo.PageUnmarked = newPageNumber; });
+        SearchUnmarkedTodos();
+    }
+    private async Task OnDoneTodosPaging(int newPageNumber)
+    {
+        await Task.Run(() => { parameterSearchTodo.PageUnmarked = newPageNumber; });
+        SearchDoneTodos();
+    }
+    private async Task OnCancelledTodosPaging(int newPageNumber)
+    {
+        await Task.Run(() => { parameterSearchTodo.PageUnmarked = newPageNumber; });
+        SearchCanceledTodos();
+    }
+
+    private async void ShowModalEditTodo(Todo selectedTodo)
+    {
+        var parameters = new Dictionary<string, object>();
+        var title = "Edit Todo";
+        if (selectedTodo == null || selectedTodo.Id == 0)
+        {
+            title = "Add New Todo";
+            selectedTodo = new Todo
+            {
+                MarkingId = (int)MarkingEnum.Unmarked
+            };
+        }
+        selectedItem = new Todo
+        {
+            MarkingId = selectedTodo.MarkingId
+        }; 
+        parameters.Add("selectedTodo", selectedTodo);
+        parameters.Add("onModalCallback", EventCallback.Factory.Create<Todo>(this, CloseModalEditTodo));
+
+        await modalEditTodo.ShowAsync<ModalEditTodo>(title: title, parameters: parameters);
+    }
+
+    private Task CloseModalEditTodo(Todo resultTodo)
+    {
+        if (resultTodo != null)
+        {
+            // refresh data after add/edit
+            if (resultTodo?.MarkingId == (int)(MarkingEnum.Unmarked))
+            {
+                // unmarkedTodos.Todo = unmarkedTodos.Todo.Prepend(resultTodo).ToList();
+                SearchUnmarkedTodos();
+            }
+            else if (resultTodo?.MarkingId == (int)(MarkingEnum.Done))
+            {
+                // doneTodos.Todo = doneTodos.Todo.Prepend(resultTodo).ToList();
+                SearchDoneTodos();
+            }
+            else if (resultTodo?.MarkingId == (int)(MarkingEnum.Canceled))
+            {
+                // canceledTodos.Todo = canceledTodos.Todo.Prepend(resultTodo).ToList();
+                SearchCanceledTodos();
+            }
+            // refresh data after edit to other Marking
+            if (selectedItem != null && selectedItem?.MarkingId != resultTodo.MarkingId)
+            {
+                if (selectedItem?.MarkingId == (int)(MarkingEnum.Unmarked))
+                {
+                    if ((unmarkedTodos.Total - 1) <= parameterSearchTodo.PageUnmarked * 10)
+                        parameterSearchTodo.PageUnmarked = parameterSearchTodo.PageUnmarked - 1;
+                    SearchUnmarkedTodos();
+                }
+                else if (selectedItem?.MarkingId == (int)(MarkingEnum.Done))
+                {
+                    if ((doneTodos.Total - 1) <= parameterSearchTodo.PageDone * 10)
+                        parameterSearchTodo.PageDone = parameterSearchTodo.PageDone - 1;
+                    SearchDoneTodos();
+                }
+                else if (selectedItem?.MarkingId == (int)(MarkingEnum.Canceled))
+                {
+                    if ((canceledTodos.Total - 1) <= parameterSearchTodo.PageCanceled * 10)
+                        parameterSearchTodo.PageCanceled = parameterSearchTodo.PageCanceled - 1;
+                    SearchCanceledTodos();
+                }
+            }
+            //success
+        }
+        selectedItem = null;
+        modalEditTodo?.HideAsync();
+        return Task.CompletedTask;
+    }
+
+
+    protected async Task DeleteTodo(Todo selectedItem)
+    {
+        SweetAlertResult result = await Swal.FireAsync(new SweetAlertOptions
+            {
+                Title = "Delete Todo",
+                Text = "Are You sure want to delete Todo '" + selectedItem.Subject + "'?",
+                Icon = SweetAlertIcon.Warning,
+                ShowCancelButton = true,
+                ConfirmButtonText = "Ok",
+            }
+        );
+        if (!string.IsNullOrEmpty(result.Value))
+        {
+            var userId = Int32.Parse(await CookieService.GetValue("userId"));
+            var response = await _todoRepo.DeleteTodo(userId, selectedItem.Id);
+            isLoadingDone = false;
+            if (response.Code != 200)
+            {
+                return;
+            }
+
+            SweetAlertResult resultDelete = await Swal.FireAsync(new SweetAlertOptions
+                {
+                    Title = "Success",
+                    Text = "Successfully Detele Todo '" + selectedItem.Subject + "'?",
+                    Icon = SweetAlertIcon.Success,
+                    ShowCancelButton = false,
+                    ConfirmButtonText = "Ok",
+                }
+            );
+            if (!string.IsNullOrEmpty(resultDelete.Value) || string.IsNullOrEmpty(resultDelete.Value))
+            {
+                if (selectedItem.MarkingId == (int)MarkingEnum.Unmarked)
+                {
+                    if ((unmarkedTodos.Total-1) <= parameterSearchTodo.PageUnmarked * 10)
+                        parameterSearchTodo.PageUnmarked = parameterSearchTodo.PageUnmarked - 1;
+                    SearchUnmarkedTodos();
+                }
+                else if (selectedItem.MarkingId == (int)(MarkingEnum.Done))
+                {
+                    if ((doneTodos.Total-1) <= parameterSearchTodo.PageDone * 10)
+                        parameterSearchTodo.PageDone = parameterSearchTodo.PageDone - 1;
+                    SearchDoneTodos();
+                }
+                else if (selectedItem.MarkingId == (int)(MarkingEnum.Canceled))
+                {
+                    if ((canceledTodos.Total - 1) <= parameterSearchTodo.PageCanceled * 10)
+                        parameterSearchTodo.PageCanceled = parameterSearchTodo.PageCanceled - 1;
+                    SearchCanceledTodos();
+                }
+            }
+        }
+    }
+
+
+    private class ParameterSearchTodo
+    {
+        public ParameterSearchTodo() {
+            Search = "";
+            PageUnmarked = 1;
+            PageDone = 1;
+            PageCanceled = 1;
+        }
+        public string Search { get; set; }
+        public int PageUnmarked { get; set; }
+        public int PageDone { get; set; }
+        public int PageCanceled { get; set; }
+    }
+}

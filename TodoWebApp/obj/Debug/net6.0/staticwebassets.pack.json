@@ -1,0 +1,81 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TodoWebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TodoWebApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.TodoWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.TodoWebApp.props",
+      "PackagePath": "build\\TodoWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.TodoWebApp.props",
+      "PackagePath": "buildMultiTargeting\\TodoWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.TodoWebApp.props",
+      "PackagePath": "buildTransitive\\TodoWebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

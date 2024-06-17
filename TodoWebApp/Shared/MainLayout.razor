@@ -1,0 +1,59 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+@* @inject ICookieService CookieService *@
+
+<PageTitle>TodoWebApp</PageTitle>
+
+<div class="page">
+    @if (@pagePath != "/register" && @pagePath != "/login")
+    {
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+    }
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+@code {
+    private string pagePath;
+
+    // private bool isInitialized = false;
+
+    // protected override async Task OnAfterRenderAsync(bool firstRender)
+    // {
+    //     if (firstRender)
+    //     {
+    //         var userId = await CookieService.GetValue("userId");
+    //         var uri = new Uri(Navigation.Uri);
+    //         string path= uri.AbsolutePath;
+    //         if (string.IsNullOrEmpty(userId) && (path != "/register" && path != "/login"))
+    //         {
+    //             // Redirect to login if the userId cookie is not found
+    //             Navigation.NavigateTo("/login", true);
+    //         }
+    //         else
+    //         {
+    //             isInitialized = true;
+    //             StateHasChanged();
+    //         }
+    //     }
+    // }
+    protected override async Task OnParametersSetAsync()
+    {
+        // Get the full URL
+        var uri = new Uri(Navigation.Uri);
+
+        // Get only the page path
+        pagePath = uri.AbsolutePath;
+    }
+
+}

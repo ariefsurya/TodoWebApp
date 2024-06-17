@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  todosapi:
+    container_name: todosapi
+    image: todosapi
+    build:
+      context: .
+      dockerfile: TodosApi/Dockerfile
+    restart: always
+    ports:
+        - "9000:443"
+        - "9001:80"
+    volumes:
+      - ./TodosApi/Database:/app/Database
+    networks:
+      - todonetwork
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Data Source=Database/todo.db
+  todowebapp:
+    container_name: todowebapp
+    image: todowebapp
+    build:
+      context: .
+      dockerfile: TodoWebApp/Dockerfile
+    restart: always
+    ports:
+        - "9005:443"
+        - "9006:80"
+    networks:
+      - todonetwork
+
+networks:
+  todonetwork:
+    driver: bridge
