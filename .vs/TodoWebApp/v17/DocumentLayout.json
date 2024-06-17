@@ -154,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Document",
@@ -167,8 +167,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-13T05:49:28.103Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -181,8 +180,7 @@
               "ViewState": "AQIAAB4AAAAAAAAAAIBJwCwAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-14T06:15:35.977Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -195,8 +193,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-14T06:15:47.681Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -209,8 +206,7 @@
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-13T05:39:36.912Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -223,8 +219,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2024-06-14T15:42:37.701Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -237,8 +232,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAACBjwBEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2024-06-15T06:12:32.763Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -251,8 +245,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-06-14T14:12:37.04Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -265,8 +258,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-06-14T15:53:43.755Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -279,8 +271,7 @@
               "ViewState": "AQIAABAAAAAAAAAAAAAQwCQAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T06:43:33.917Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -293,8 +284,7 @@
               "ViewState": "AQIAACgAAAAAAAAAAAAcwCwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T05:21:33.283Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -307,8 +297,7 @@
               "ViewState": "AQIAAGkAAAAAAAAAAAA7wHQAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-15T08:44:36.786Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -321,8 +310,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T05:31:29.005Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -335,8 +323,7 @@
               "ViewState": "AQIAAHABAAAAAAAAAAAAAEsBAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-15T13:41:40.616Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -349,8 +336,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-16T09:07:26.566Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -363,8 +349,7 @@
               "ViewState": "AQIAAAMAAAAAAAAAAAAAACoAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T05:42:59.902Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -377,8 +362,7 @@
               "ViewState": "AQIAANEBAAAAAAAAAAAYwNIBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T17:26:07.534Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -391,8 +375,11 @@
               "ViewState": "AQIAABEAAAAAAAAAAAAgwCEAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T08:42:51.227Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
@@ -408,10 +395,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "IUserServices.cs",
@@ -421,8 +404,7 @@
               "RelativeToolTip": "TodosApi\\Services\\UserServices\\IUserServices.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:18:45.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T08:18:45.318Z"
             },
             {
               "$type": "Document",
@@ -434,8 +416,7 @@
               "RelativeToolTip": "TodosApi\\Services\\UserServices\\UserServices.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAMwBgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:19:01.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T08:19:01.288Z"
             },
             {
               "$type": "Document",
@@ -447,8 +428,7 @@
               "RelativeToolTip": "TodoWebApp\\Repository\\TodoRepository\\ITodoRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T05:42:53.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T05:42:53.782Z"
             },
             {
               "$type": "Document",
@@ -460,8 +440,7 @@
               "RelativeToolTip": "TodoWebApp\\Shared\\NavMenu.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T18:14:48.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T18:14:48.053Z"
             },
             {
               "$type": "Document",
@@ -473,8 +452,7 @@
               "RelativeToolTip": "TodoWebApp\\_Imports.razor",
               "ViewState": "AQIAAAEAAAAAAAAAAAApwA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T18:11:34.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T18:11:34.238Z"
             },
             {
               "$type": "Document",
@@ -486,8 +464,7 @@
               "RelativeToolTip": "TodoWebApp\\Pages\\_Layout.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T17:59:46.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T17:59:46.995Z"
             },
             {
               "$type": "Document",
@@ -499,8 +476,7 @@
               "RelativeToolTip": "TodoWebApp\\Pages\\Index.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T17:59:20.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T17:59:20.794Z"
             },
             {
               "$type": "Document",
@@ -512,8 +488,7 @@
               "RelativeToolTip": "TodoWebApp\\Pages\\_Host.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T18:22:38.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T18:22:38.562Z"
             },
             {
               "$type": "Document",
@@ -538,8 +513,7 @@
               "RelativeToolTip": "TodoWebApp\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwCgAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T15:13:12.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T15:13:12.974Z"
             },
             {
               "$type": "Document",
@@ -551,8 +525,7 @@
               "RelativeToolTip": "TodosApi\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T13:33:14.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T13:33:14.852Z"
             },
             {
               "$type": "Document",
@@ -564,8 +537,7 @@
               "RelativeToolTip": "TodoWebApp\\Service\\ICookieService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T07:35:31.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T07:35:31.516Z"
             },
             {
               "$type": "Document",
@@ -577,8 +549,7 @@
               "RelativeToolTip": "TodoWebApp\\Service\\CookieService.cs",
               "ViewState": "AQIAABYAAAAAAAAAAIBZwCAAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T06:02:18.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T06:02:18.39Z"
             },
             {
               "$type": "Document",
@@ -590,8 +561,7 @@
               "RelativeToolTip": "TodoWebApp\\Service\\StringService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T06:25:53.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T06:25:53.607Z"
             },
             {
               "$type": "Document",
@@ -603,8 +573,7 @@
               "RelativeToolTip": "TodosApi\\Middleware\\CustomExceptionMiddleware.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAqwCcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T05:48:34.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T05:48:34.829Z"
             },
             {
               "$type": "Document",
@@ -616,8 +585,7 @@
               "RelativeToolTip": "TodoWebApp\\Repository\\UserRepository\\IUserRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T05:45:09.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T05:45:09.466Z"
             },
             {
               "$type": "Document",
@@ -629,8 +597,7 @@
               "RelativeToolTip": "Models\\Marking.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T05:24:45.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T05:24:45.648Z"
             },
             {
               "$type": "Document",
@@ -642,8 +609,7 @@
               "RelativeToolTip": "Models\\Todo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T05:22:48.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T05:22:48.828Z"
             }
           ]
         }
