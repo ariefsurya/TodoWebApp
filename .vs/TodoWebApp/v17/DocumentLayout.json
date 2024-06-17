@@ -7,40 +7,56 @@
       "RelativeMoniker": "D:0:0:{1E43FFA7-2765-4E12-81F6-6E0C52FD147E}|TodosApiTests\\TodosApiTests.csproj|solutionrelative:todosapitests\\controllers\\usercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\repository\\userrepository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\repository\\userrepository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\repository\\todorepository\\todorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\repository\\todorepository\\todorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E43FFA7-2765-4E12-81F6-6E0C52FD147E}|TodosApiTests\\TodosApiTests.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapitests\\controllers\\todocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E43FFA7-2765-4E12-81F6-6E0C52FD147E}|TodosApiTests\\TodosApiTests.csproj|solutionrelative:todosapitests\\controllers\\todocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|solutionrelative:todosapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\pages\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\pages\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapi\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|solutionrelative:todosapi\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\repository\\todorepository\\itodorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\repository\\todorepository\\itodorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E43FFA7-2765-4E12-81F6-6E0C52FD147E}|TodosApiTests\\TodosApiTests.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapitests\\controllers\\todocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E43FFA7-2765-4E12-81F6-6E0C52FD147E}|TodosApiTests\\TodosApiTests.csproj|solutionrelative:todosapitests\\controllers\\todocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapi\\data\\responsehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|solutionrelative:todosapi\\data\\responsehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapi\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|solutionrelative:todosapi\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapi\\services\\userservices\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|solutionrelative:todosapi\\services\\userservices\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapi\\services\\userservices\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|solutionrelative:todosapi\\services\\userservices\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\pages\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\pages\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\repository\\todorepository\\todorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\repository\\todorepository\\todorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\repository\\userrepository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\repository\\userrepository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapi\\services\\todoservices\\todoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|solutionrelative:todosapi\\services\\todoservices\\todoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|c:\\arief\\test kawan lama\\todowebapp\\todosapi\\services\\todoservices\\itodoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3C1C1F1-DE58-4A47-AEA7-C71D158305B1}|TodosApi\\TodosApi.csproj|solutionrelative:todosapi\\services\\todoservices\\itodoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -69,14 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\pages\\home\\modaledittodo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\pages\\home\\modaledittodo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|solutionrelative:todowebapp\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E93593B7-86E7-4330-B662-5395977CFBCE}|TodoWebApp\\TodoWebApp.csproj|c:\\arief\\test kawan lama\\todowebapp\\todowebapp\\pages\\user\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -150,7 +158,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -164,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Register.razor",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\User\\Register.razor",
               "RelativeDocumentMoniker": "TodoWebApp\\Pages\\User\\Register.razor",
@@ -178,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\User\\Login.razor",
               "RelativeDocumentMoniker": "TodoWebApp\\Pages\\User\\Login.razor",
@@ -192,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Shared\\MainLayout.razor",
               "RelativeDocumentMoniker": "TodoWebApp\\Shared\\MainLayout.razor",
@@ -206,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -220,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "docker-compose.override.yml",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\docker-compose.override.yml",
               "RelativeDocumentMoniker": "docker-compose.override.yml",
@@ -234,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Dockerfile",
               "RelativeDocumentMoniker": "TodosApi\\Dockerfile",
@@ -248,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Dockerfile",
               "RelativeDocumentMoniker": "TodoWebApp\\Dockerfile",
@@ -262,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Repository\\UserRepository\\UserRepository.cs",
               "RelativeDocumentMoniker": "TodoWebApp\\Repository\\UserRepository\\UserRepository.cs",
@@ -276,13 +284,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "TodosApi\\Controllers\\UserController.cs",
               "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "TodosApi\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAwDkAAABmAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAcwCwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T05:21:33.283Z",
               "IsPinned": true,
@@ -290,13 +298,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "TodoController.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Controllers\\TodoController.cs",
               "RelativeDocumentMoniker": "TodosApi\\Controllers\\TodoController.cs",
               "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Controllers\\TodoController.cs",
               "RelativeToolTip": "TodosApi\\Controllers\\TodoController.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAD4v40AAAAxAAAA",
+              "ViewState": "AQIAAGkAAAAAAAAAAAA7wHQAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-15T08:44:36.786Z",
               "IsPinned": true,
@@ -304,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "TodoServices.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Services\\TodoServices\\TodoServices.cs",
               "RelativeDocumentMoniker": "TodosApi\\Services\\TodoServices\\TodoServices.cs",
@@ -318,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\Home\\Home.razor",
               "RelativeDocumentMoniker": "TodoWebApp\\Pages\\Home\\Home.razor",
@@ -332,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "ModalEditTodo.razor",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\Home\\ModalEditTodo.razor",
               "RelativeDocumentMoniker": "TodoWebApp\\Pages\\Home\\ModalEditTodo.razor",
@@ -346,13 +354,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "TodoRepository.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Repository\\TodoRepository\\TodoRepository.cs",
               "RelativeDocumentMoniker": "TodoWebApp\\Repository\\TodoRepository\\TodoRepository.cs",
               "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Repository\\TodoRepository\\TodoRepository.cs",
               "RelativeToolTip": "TodoWebApp\\Repository\\TodoRepository\\TodoRepository.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAgwCoAAABJAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACoAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T05:42:59.902Z",
               "IsPinned": true,
@@ -366,7 +374,7 @@
               "RelativeDocumentMoniker": "TodosApiTests\\Controllers\\UserControllerTests.cs",
               "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApiTests\\Controllers\\UserControllerTests.cs",
               "RelativeToolTip": "TodosApiTests\\Controllers\\UserControllerTests.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAnwH8AAAAXAAAA",
+              "ViewState": "AQIAALsAAAAAAAAAAADwv8sAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T05:41:20.338Z",
               "IsPinned": true,
@@ -374,13 +382,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "TodoControllerTests.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApiTests\\Controllers\\TodoControllerTests.cs",
               "RelativeDocumentMoniker": "TodosApiTests\\Controllers\\TodoControllerTests.cs",
               "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApiTests\\Controllers\\TodoControllerTests.cs",
               "RelativeToolTip": "TodosApiTests\\Controllers\\TodoControllerTests.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAiwBAAAAAJAAAA",
+              "ViewState": "AQIAAMMBAAAAAAAAAAAYwMoBAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T17:26:07.534Z",
               "IsPinned": true,
@@ -389,6 +397,46 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ResponseHandler.cs",
+              "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Data\\ResponseHandler.cs",
+              "RelativeDocumentMoniker": "TodosApi\\Data\\ResponseHandler.cs",
+              "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Data\\ResponseHandler.cs",
+              "RelativeToolTip": "TodosApi\\Data\\ResponseHandler.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwCEAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:42:51.227Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserServices.cs",
+              "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Services\\UserServices\\IUserServices.cs",
+              "RelativeDocumentMoniker": "TodosApi\\Services\\UserServices\\IUserServices.cs",
+              "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Services\\UserServices\\IUserServices.cs",
+              "RelativeToolTip": "TodosApi\\Services\\UserServices\\IUserServices.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:18:45.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Services\\UserServices\\UserServices.cs",
+              "RelativeDocumentMoniker": "TodosApi\\Services\\UserServices\\UserServices.cs",
+              "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Services\\UserServices\\UserServices.cs",
+              "RelativeToolTip": "TodosApi\\Services\\UserServices\\UserServices.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAMwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:19:01.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ITodoRepository.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Repository\\TodoRepository\\ITodoRepository.cs",
               "RelativeDocumentMoniker": "TodoWebApp\\Repository\\TodoRepository\\ITodoRepository.cs",
@@ -401,20 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "_Host.cshtml",
-              "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\_Host.cshtml",
-              "RelativeDocumentMoniker": "TodoWebApp\\Pages\\_Host.cshtml",
-              "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\_Host.cshtml",
-              "RelativeToolTip": "TodoWebApp\\Pages\\_Host.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T18:22:38.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 10,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "TodoWebApp\\Shared\\NavMenu.razor",
@@ -427,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 8,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\_Imports.razor",
               "RelativeDocumentMoniker": "TodoWebApp\\_Imports.razor",
@@ -440,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\_Layout.cshtml",
               "RelativeDocumentMoniker": "TodoWebApp\\Pages\\_Layout.cshtml",
@@ -453,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Index.razor",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\Index.razor",
               "RelativeDocumentMoniker": "TodoWebApp\\Pages\\Index.razor",
@@ -466,7 +501,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 16,
+              "Title": "_Host.cshtml",
+              "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\_Host.cshtml",
+              "RelativeDocumentMoniker": "TodoWebApp\\Pages\\_Host.cshtml",
+              "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Pages\\_Host.cshtml",
+              "RelativeToolTip": "TodoWebApp\\Pages\\_Host.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-16T18:22:38.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "TodoWebApp.csproj",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\TodoWebApp.csproj",
               "RelativeDocumentMoniker": "TodoWebApp\\TodoWebApp.csproj",
@@ -479,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Program.cs",
               "RelativeDocumentMoniker": "TodoWebApp\\Program.cs",
@@ -492,20 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ITodoServices.cs",
-              "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Services\\TodoServices\\ITodoServices.cs",
-              "RelativeDocumentMoniker": "TodosApi\\Services\\TodoServices\\ITodoServices.cs",
-              "ToolTip": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Services\\TodoServices\\ITodoServices.cs",
-              "RelativeToolTip": "TodosApi\\Services\\TodoServices\\ITodoServices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T14:10:00.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Program.cs",
               "RelativeDocumentMoniker": "TodosApi\\Program.cs",
@@ -518,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "ICookieService.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Service\\ICookieService.cs",
               "RelativeDocumentMoniker": "TodoWebApp\\Service\\ICookieService.cs",
@@ -531,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "CookieService.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Service\\CookieService.cs",
               "RelativeDocumentMoniker": "TodoWebApp\\Service\\CookieService.cs",
@@ -544,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "StringService.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Service\\StringService.cs",
               "RelativeDocumentMoniker": "TodoWebApp\\Service\\StringService.cs",
@@ -557,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "CustomExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodosApi\\Middleware\\CustomExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "TodosApi\\Middleware\\CustomExceptionMiddleware.cs",
@@ -570,7 +605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\TodoWebApp\\Repository\\UserRepository\\IUserRepository.cs",
               "RelativeDocumentMoniker": "TodoWebApp\\Repository\\UserRepository\\IUserRepository.cs",
@@ -583,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Marking.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\Models\\Marking.cs",
               "RelativeDocumentMoniker": "Models\\Marking.cs",
@@ -596,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Todo.cs",
               "DocumentMoniker": "C:\\arief\\Test Kawan Lama\\TodoWebApp\\Models\\Todo.cs",
               "RelativeDocumentMoniker": "Models\\Todo.cs",

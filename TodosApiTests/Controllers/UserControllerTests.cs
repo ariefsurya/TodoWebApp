@@ -13,12 +13,13 @@ namespace TodosApi.Controllers.Tests
     [TestClass()]
     public class UserControllerTests
     {
+        #region RegisterUser
         [Fact]
         public void RegisterUser_ValidUser_ReturnsOk()
         {
             //arrange
             var mockUserServices = new Mock<IUserServices>();
-            mockUserServices.Setup(service => service.isUserExists(It.IsAny<string>())).Returns(false);
+            mockUserServices.Setup(service => service.isUserNameExists(It.IsAny<string>())).Returns(false);
             mockUserServices.Setup(service => service.AddUser(It.IsAny<User>())).Returns(new User { 
                 Id = 1,
                 Username = "myName",
@@ -45,11 +46,10 @@ namespace TodosApi.Controllers.Tests
             Assert.Equal(user.Id, (apiResponse.Data as User).Id);
         }
         [Fact]
-        public void RegisterUser_ValidateInput_ReturnsBadRequest()
+        public void RegisterUser_InvalidInput_ReturnsBadRequest()
         {
             //arrange
             var mockUserServices = new Mock<IUserServices>();
-            mockUserServices.Setup(service => service.isUserExists(It.IsAny<string>())).Returns(false);
             mockUserServices.Setup(service => service.AddUser(It.IsAny<User>())).Returns(new User { 
                 Id = 1,
                 Username = "myName",
@@ -84,11 +84,11 @@ namespace TodosApi.Controllers.Tests
             Assert.Equal("Username And Password cannot be empty!", apiResponse2.Data);
         }
         [Fact]
-        public void RegisterUser_ValidateAlreadyExists_ReturnsBadRequest()
+        public void RegisterUser_InvalidAlreadyExists_ReturnsBadRequest()
         {
             //arrange
             var mockUserServices = new Mock<IUserServices>();
-            mockUserServices.Setup(service => service.isUserExists(It.IsAny<string>())).Returns(true);
+            mockUserServices.Setup(service => service.isUserNameExists(It.IsAny<string>())).Returns(true);
 
             var userController = new UserController(mockUserServices.Object);
             User user = new User
@@ -109,8 +109,9 @@ namespace TodosApi.Controllers.Tests
             Assert.Equal("BadRequest", apiResponse.Message);
             Assert.Equal("Username Already Exists!", apiResponse.Data);
         }
+        #endregion
 
-
+        #region GetLogin
         [TestMethod()]
         public void GetLogin_ValidUser_ReturnsOk()
         {
@@ -143,12 +144,16 @@ namespace TodosApi.Controllers.Tests
             Assert.Equal(user.Id, (apiResponse.Data as User).Id);
         }
         [Fact]
-        public void GetLogin_ValidateInput_ReturnsBadRequest()
+        public void GetLogin_InvalidInput_ReturnsBadRequest()
         {
             //arrange
             var mockUserServices = new Mock<IUserServices>();
             var userController = new UserController(mockUserServices.Object);
-            User user1 = null;
+            User user1 = new User
+            {
+                Username = "",
+                Password = "myPassword"
+            };
             User user2 = new User
             {
                 Username = "myName",
@@ -167,7 +172,7 @@ namespace TodosApi.Controllers.Tests
             Assert.Equal("BadRequest", apiResponse.Message);
             Assert.Equal("Your username or password cannot be empty.", apiResponse.Data);
 
-            var badResult2 = Assert.IsType<BadRequestObjectResult>(result1);
+            var badResult2 = Assert.IsType<BadRequestObjectResult>(result2);
             ApiResponse apiResponse2 = badResult2.Value as ApiResponse;
             Assert.NotNull(apiResponse2);
             Assert.Equal((int)HttpStatusCode.BadRequest, apiResponse2.Code);
@@ -175,7 +180,7 @@ namespace TodosApi.Controllers.Tests
             Assert.Equal("Your username or password cannot be empty.", apiResponse2.Data);
         }
         [Fact]
-        public void GetLogin_ValidateWrongPassword_ReturnsBadRequest()
+        public void GetLogin_InvalidWrongPassword_ReturnsBadRequest()
         {
             //arrange
             var mockUserServices = new Mock<IUserServices>();
@@ -192,12 +197,13 @@ namespace TodosApi.Controllers.Tests
             var result = userController.GetLogin(user.Username, user.Password);
 
             //assert
-            var badResult = Assert.IsType<BadRequestObjectResult>(result);
+            var badResult = Assert.IsType<NotFoundObjectResult>(result);
             ApiResponse apiResponse = badResult.Value as ApiResponse;
             Assert.NotNull(apiResponse);
-            Assert.Equal((int)HttpStatusCode.BadRequest, apiResponse.Code);
-            Assert.Equal("BadRequest", apiResponse.Message);
+            Assert.Equal((int)HttpStatusCode.NotFound, apiResponse.Code);
+            Assert.Equal("NotFound", apiResponse.Message);
             Assert.Equal("Your username or password is incorrect.", apiResponse.Data);
         }
+        #endregion
     }
 }

@@ -27,7 +27,7 @@ namespace TodosApi.Controllers
                 {
                     return responseHandler.ApiReponseBadRequest("Username And Password cannot be empty!");
                 }
-                bool isUserAlreadyExists = _userServices.isUserExists(user.Username);
+                bool isUserAlreadyExists = _userServices.isUserNameExists(user.Username);
                 if (isUserAlreadyExists)
                 {
                     return responseHandler.ApiReponseBadRequest("Username Already Exists!");

@@ -52,7 +52,7 @@ namespace TodosApi.Controllers
                 {
                     Todo oTodo = _todoServices.GetTodoByIdAndCreatedBy(todoParam.Id, user.Id);
                     if (oTodo == null)
-                        throw new DataException("Todo Not Found!");
+                        return responseHandler.ApiReponseNotFound("Todo Not Found!");
                     oTodo.Subject = todoParam.Subject;
                     oTodo.Description = todoParam.Description;
                     oTodo.MarkingId = todoParam.MarkingId;
@@ -101,33 +101,6 @@ namespace TodosApi.Controllers
                 return responseHandler.ApiReponseException(ex);
             }
         }
-
-        [HttpGet("GetMyTodoById")]
-        public IActionResult GetMyTodoById(int userId, int todoId)
-        {
-            try
-            {
-                //validation
-                if (userId == null || userId == 0)
-                    return responseHandler.ApiReponseBadRequest("user Not Found!");
-                else if (todoId == null || todoId == 0)
-                    return responseHandler.ApiReponseBadRequest("Todo id Not Found!");
-
-                User user = _userServices.GetUser(userId);
-                if (user == null)
-                    return responseHandler.ApiReponseNotFound("User Not Found!");
-                Todo todo = _todoServices.GetTodoByIdAndCreatedBy(todoId, userId);
-                if (todo == null)
-                    return responseHandler.ApiReponseNotFound("Todo Not Found!");
-
-                return responseHandler.ApiReponseHandler(todo);
-            }
-            catch (Exception ex)
-            {
-                return responseHandler.ApiReponseException(ex);
-            }
-        }
-
 
         [HttpDelete("DeleteMyTodoById")]
         public IActionResult DeleteMyTodoById(int userId, int todoId)
