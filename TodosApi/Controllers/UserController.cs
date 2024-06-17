@@ -64,18 +64,5 @@ namespace TodosApi.Controllers
                 return responseHandler.ApiReponseException(ex);
             }
         }
-
-        [HttpGet("getAllUser")]
-        public IActionResult GetAllUser()
-        {
-            try
-            {
-                return responseHandler.ApiReponseHandler(_userServices.GeUserList());
-            }
-            catch (Exception ex)
-            {
-                return responseHandler.ApiReponseException(ex);
-            }
-        }
     }
 }

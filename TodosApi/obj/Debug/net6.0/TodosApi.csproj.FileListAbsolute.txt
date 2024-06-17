@@ -81,3 +81,4 @@ C:\arief\Test Kawan Lama\TodoWebApp\TodosApi\obj\Debug\net6.0\refint\TodosApi.dl
 C:\arief\Test Kawan Lama\TodoWebApp\TodosApi\obj\Debug\net6.0\TodosApi.pdb
 C:\arief\Test Kawan Lama\TodoWebApp\TodosApi\obj\Debug\net6.0\TodosApi.genruntimeconfig.cache
 C:\arief\Test Kawan Lama\TodoWebApp\TodosApi\obj\Debug\net6.0\ref\TodosApi.dll
+C:\arief\Test Kawan Lama\TodoWebApp\TodosApi\obj\Debug\net6.0\TodosApi.sourcelink.json
