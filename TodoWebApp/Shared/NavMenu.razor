@@ -1,6 +1,7 @@
 ﻿@* @using TodoWebApp.Service *@
 @inject NavigationManager Navigation
 @inject ICookieService CookieService
+@inject CustomAuthenticationStateProvider AuthenticationStateProvider
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
@@ -36,9 +37,10 @@
         collapseNavMenu = !collapseNavMenu;
     }
 
-    private void AuthLogout()
+    private async Task AuthLogout()
     {
-        CookieService.DeleteCookie("userId");
+        AuthenticationStateProvider.MarkUserAsLoggedOut();
+        await CookieService.DeleteCookie("userId");
         Navigation.NavigateTo("/login");
     }
 }

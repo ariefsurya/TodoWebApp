@@ -1,10 +1,12 @@
 ﻿@page "/login"
 @using Newtonsoft.Json
+@using System.Security.Claims
 @using TodoWebApp.Repository.UserRepository
 @* @using TodoWebApp.Service *@
 @inject IUserRepository _userRepo
 @inject NavigationManager Navigation
 @inject ICookieService CookieService
+@inject CustomAuthenticationStateProvider AuthenticationStateProvider
 
 <div class="d-flex p-5">
     <div class="w-50 fs-2 pe-5">
@@ -71,9 +73,10 @@
                 LoginErrorMessage = response.Data.ToString();
                 return;
             }
-
             var user = JsonConvert.DeserializeObject<User>(response.Data.ToString());
             await CookieService.SetValue("userId", user.Id.ToString());
+
+            AuthenticationStateProvider.MarkUserAsAuthenticated(user.Id.ToString());
 
             Navigation.NavigateTo("/");
         }

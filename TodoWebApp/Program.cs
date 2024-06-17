@@ -1,9 +1,9 @@
 using CurrieTechnologies.Razor.SweetAlert2;
+using Microsoft.AspNetCore.Components.Authorization;
 using TodoWebApp.Data;
 using TodoWebApp.Repository.TodoRepository;
 using TodoWebApp.Repository.UserRepository;
 using TodoWebApp.Service;
-//using Blazored.Modal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +22,12 @@ builder.Services.AddTransient<ICookieService, CookieService>();
 builder.Services.AddTransient<StringService>();
 builder.Services.AddSweetAlert2();
 builder.Services.AddBlazorBootstrap();
-//builder.Services.AddBlazoredModal();
+// Add authorization services
+builder.Services.AddAuthorizationCore();
+builder.Services.AddScoped<CustomAuthenticationStateProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider>(provider =>
+    provider.GetRequiredService<CustomAuthenticationStateProvider>());
+
 
 var app = builder.Build();
 

@@ -1,6 +1,4 @@
 ﻿@page "/"
-@using BlazorBootstrap;
-@using Newtonsoft.Json
 @using TodoWebApp.Enum
 @using TodoWebApp.Repository.TodoRepository
 @* @using TodoWebApp.Service *@
@@ -8,6 +6,10 @@
 @inject SweetAlertService Swal
 @inject ICookieService CookieService
 @inject StringService StringService
+@inject NavigationManager Navigation
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <h3>My Todo List</h3>
 <div class="d-flex justify-content-between pb-1">
@@ -166,12 +168,36 @@
     private bool isLoadingUnmarked = false;
     private bool isLoadingDone = false;
     private bool isLoadingCanceled = false;
+    private string strUserId = "";
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        parameterSearchTodo.Search = "";
-        SearchTodos(null);
+        if (firstRender)
+        {
+            await InvokeAsync(async () =>
+            {
+                    var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+                    var user = authState.User;
+
+                    if (!user.Identity.IsAuthenticated)
+                    {
+                        Navigation.NavigateTo("/login");
+                        return;
+                    }
+            });
+
+            strUserId = await CookieService.GetValue("userId");
+            if (!string.IsNullOrEmpty(strUserId))
+            {
+                parameterSearchTodo.Search = "";
+                SearchTodos(null);
+            }
+        }
     }
+
+    // protected override async Task OnParametersSetAsync()
+    // {
+    // }
 
     private async Task OnSearchKeywordChanged(KeyboardEventArgs e)
     {
@@ -197,7 +223,7 @@
         await InvokeAsync(async () =>
         {
             isLoadingUnmarked = true;
-            var userId = Int32.Parse(await CookieService.GetValue("userId"));
+            var userId = Int32.Parse(strUserId);
             var response = await _todoRepo.SearchMyTodo(userId, parameterSearchTodo.Search, parameterSearchTodo.PageUnmarked, (int)MarkingEnum.Unmarked);
             isLoadingUnmarked = false;
             if (response.Code != 200)
@@ -215,7 +241,7 @@
         await InvokeAsync(async () =>
         {
             isLoadingDone = true;
-            var userId = Int32.Parse(await CookieService.GetValue("userId"));
+            var userId = Int32.Parse(strUserId);
             var response = await _todoRepo.SearchMyTodo(userId, parameterSearchTodo.Search, parameterSearchTodo.PageUnmarked, (int)MarkingEnum.Done);
             isLoadingDone = false;
             if (response.Code != 200)
@@ -233,7 +259,7 @@
         await InvokeAsync(async () =>
         {
             isLoadingCanceled = true;
-            var userId = Int32.Parse(await CookieService.GetValue("userId"));
+            var userId = Int32.Parse(strUserId);
             var response = await _todoRepo.SearchMyTodo(userId, parameterSearchTodo.Search, parameterSearchTodo.PageUnmarked, (int)MarkingEnum.Canceled);
             isLoadingCanceled = false;
             if (response.Code != 200)
@@ -348,7 +374,7 @@
         );
         if (!string.IsNullOrEmpty(result.Value))
         {
-            var userId = Int32.Parse(await CookieService.GetValue("userId"));
+            var userId = Int32.Parse(strUserId);
             var response = await _todoRepo.DeleteTodo(userId, selectedItem.Id);
             isLoadingDone = false;
             if (response.Code != 200)
