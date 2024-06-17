@@ -12,3 +12,5 @@
 **/obj/Debug/
 **/obj/Release/
 *.suo
+*.cache
+**/.vs/**/DocumentLayout.json
