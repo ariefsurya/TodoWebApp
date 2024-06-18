@@ -48,6 +48,3 @@ API Documentation:
 https://localhost:9000/swagger/index.html
 
 
-
-TODO:
-set authorization

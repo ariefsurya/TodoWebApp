@@ -11,6 +11,7 @@
 @attribute [Authorize]
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
+<Toasts class="p-3" Messages="toastMessage" Placement="ToastsPlacement.TopRight" />
 <h3>My Todo List</h3>
 <div class="d-flex justify-content-between pb-1">
     <div>
@@ -87,7 +88,8 @@
                                 <Dropdown>
                                     <DropdownToggleButton Color="ButtonColor.Secondary" Class="p-0"><Icon Name="IconName.ThreeDotsVertical" Class="small" /></DropdownToggleButton>
                                     <DropdownMenu>
-                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => ShowModalEditTodo(doneTodo)">Edit</DropdownItem>
+                                        @* <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => ShowModalEditTodo(doneTodo)">Edit</DropdownItem> *@
+                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => HandleValidSubmitUnmarked(doneTodo)">Unmarked</DropdownItem>
                                         <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => DeleteTodo(doneTodo)">Delete</DropdownItem>
                                     </DropdownMenu>
                                 </Dropdown>
@@ -131,7 +133,8 @@
                                 <Dropdown>
                                     <DropdownToggleButton Color="ButtonColor.Secondary" Class="p-0"><Icon Name="IconName.ThreeDotsVertical" Class="small" /></DropdownToggleButton>
                                     <DropdownMenu>
-                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => ShowModalEditTodo(canceledTodo)">Edit</DropdownItem>
+                                        @* <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => ShowModalEditTodo(canceledTodo)">Edit</DropdownItem> *@
+                                        <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => HandleValidSubmitUnmarked(canceledTodo)">Unmarked</DropdownItem>
                                         <DropdownItem To="#" Type="ButtonType.Link" @onclick="() => DeleteTodo(canceledTodo)">Delete</DropdownItem>
                                     </DropdownMenu>
                                 </Dropdown>
@@ -169,6 +172,7 @@
     private bool isLoadingDone = false;
     private bool isLoadingCanceled = false;
     private string strUserId = "";
+    List<ToastMessage> toastMessage = new List<ToastMessage>();
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -176,14 +180,14 @@
         {
             await InvokeAsync(async () =>
             {
-                    var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-                    var user = authState.User;
+                var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+                var user = authState.User;
 
-                    if (!user.Identity.IsAuthenticated)
-                    {
-                        Navigation.NavigateTo("/login");
-                        return;
-                    }
+                if (!user.Identity.IsAuthenticated)
+                {
+                    Navigation.NavigateTo("/login");
+                    return;
+                }
             });
 
             strUserId = await CookieService.GetValue("userId");
@@ -287,6 +291,39 @@
     {
         await Task.Run(() => { parameterSearchTodo.PageUnmarked = newPageNumber; });
         SearchCanceledTodos();
+    }
+
+    private async void HandleValidSubmitUnmarked(Todo selectedTodo)
+    {
+        selectedItem = new Todo
+        {
+            MarkingId = selectedTodo.MarkingId
+        };
+        selectedTodo.MarkingId = (int)MarkingEnum.Unmarked;
+
+        var response = await _todoRepo.SubmitTodo(selectedTodo);
+        if (response.Code != 200)
+        {
+            toastMessage.Add(new ToastMessage
+                {
+                    Type = ToastType.Danger,
+                    Message = "Failed to set Unmarked",
+                    AutoHide = true
+                }
+            );
+            return;
+        }
+        var resultTodo = JsonConvert.DeserializeObject<Todo>(response.Data.ToString());
+
+        toastMessage.Add(new ToastMessage
+            {
+                Type = ToastType.Success,
+                Message = "Successfuly set to Unmarked!",
+                AutoHide = true
+            }
+        );
+
+        await CloseModalEditTodo(resultTodo);
     }
 
     private async void ShowModalEditTodo(Todo selectedTodo)
