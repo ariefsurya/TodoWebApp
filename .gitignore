@@ -14,3 +14,4 @@
 *.suo
 *.cache
 **/.vs/**/DocumentLayout.json
+*.testlog
