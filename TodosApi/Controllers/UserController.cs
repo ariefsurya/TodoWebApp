@@ -64,5 +64,25 @@ namespace TodosApi.Controllers
                 return responseHandler.ApiReponseException(ex);
             }
         }
+
+        [HttpGet("getUserById")]
+        public IActionResult GetUserById(int id)
+        {
+            try
+            {
+                //validation
+                User user = _userServices.GetUser(id);
+
+                if (user == null)
+                {
+                    return responseHandler.ApiReponseNotFound("Your id is incorrect.");
+                }
+                return responseHandler.ApiReponseHandler(user);
+            }
+            catch (Exception ex)
+            {
+                return responseHandler.ApiReponseException(ex);
+            }
+        }
     }
 }

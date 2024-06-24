@@ -1,5 +1,7 @@
 ﻿using Models;
+using System.Collections.Generic;
 using TodosApi.Data;
+using TodosApi.Services.Redis;
 
 namespace TodosApi.Services
 {
@@ -7,9 +9,14 @@ namespace TodosApi.Services
     {
 
         private readonly DbContextClass _dbContext;
-        public TodoServices(DbContextClass dbContext)
+        private readonly ICacheService _cacheService;
+        private readonly string todoRedisKey = "todo-{0}";
+        private readonly string markingListRedisKey = "markinglist-{0}";
+
+        public TodoServices(DbContextClass dbContext, ICacheService cacheService)
         {
             _dbContext = dbContext;
+            _cacheService = cacheService;
         }
 
         public List<Todo> GeTodoList()
@@ -33,8 +40,13 @@ namespace TodosApi.Services
 
         public Todo GetTodoById(int id)
         {
-            Todo todos = _dbContext.Todo.Where(x => x.Id == id).FirstOrDefault();
-            return todos;
+            Todo todo = _cacheService.GetData<Todo>(string.Format(todoRedisKey, id.ToString()));
+            if (todo != null)
+                return todo;
+
+            todo = _dbContext.Todo.Where(x => x.Id == id).FirstOrDefault();
+            _cacheService.SetData<Todo>(string.Format(todoRedisKey, id.ToString()), todo);
+            return todo;
         }
 
         public MyTodo GetMyTodo(int createdBy, int page, int markId, string search = "")
@@ -59,7 +71,14 @@ namespace TodosApi.Services
 
         public List<Marking> GetMarkingList()
         {
-            return _dbContext.Marking.Where(x => x.Id != 0).ToList();
+            List<Marking> markingList = _cacheService.GetData<List<Marking>>(markingListRedisKey);
+            if (markingList != null && markingList.Count() == 0)
+                return markingList;
+
+            _cacheService.SetData<List<Marking>>(markingListRedisKey, markingList);
+            markingList = _dbContext.Marking.Where(x => x.Id != 0).ToList();
+
+            return markingList;
         }
     }
 }

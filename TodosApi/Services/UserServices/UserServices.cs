@@ -1,5 +1,8 @@
-﻿using Models;
+﻿using Microsoft.Extensions.Caching.Distributed;
+using Models;
+using Newtonsoft.Json;
 using TodosApi.Data;
+using TodosApi.Services.Redis;
 
 namespace TodosApi.Services
 {
@@ -7,9 +10,14 @@ namespace TodosApi.Services
     {
 
         private readonly DbContextClass _dbContext;
-        public UserServices(DbContextClass dbContext)
+        private readonly ICacheService _cacheService;
+        private readonly string userRedisKey = "user-{0}";
+
+
+        public UserServices(DbContextClass dbContext, ICacheService cacheService)
         {
             _dbContext = dbContext;
+            _cacheService = cacheService;
         }
 
         public List<User> GeUserList()
@@ -35,7 +43,15 @@ namespace TodosApi.Services
         }
         public User GetUser(int userId)
         {
-            User user = _dbContext.User.Where(x => x.Id == userId).FirstOrDefault();
+            User user = _cacheService.GetData<User>(string.Format(userRedisKey, userId.ToString()));
+            if (user != null)
+            {
+                return user;
+            }
+
+            user = _dbContext.User.Where(x => x.Id == userId).FirstOrDefault();
+            _cacheService.SetData<User>(string.Format(userRedisKey, userId.ToString()), user);
+
             return user;
         }
     }
