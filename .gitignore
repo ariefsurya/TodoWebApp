@@ -15,3 +15,6 @@
 *.cache
 **/.vs/**/DocumentLayout.json
 *.testlog
+*.v7.bin
+*.dtbcache.v2
+*.futdcache.v2
